@@ -67,7 +67,7 @@ async def For_728_of_60_size(Heading: str, Insert_image: UploadFile=File(...)):
     draw.text((490,40), capt_rec, font=font_text, fill="white")
 
     captt = "T&C Apply*"#This is for right bottom text
-    fontts = ImageFont.truetype("arial.ttf", 4)
+    fontts = ImageFont.truetype("font_style/arial.ttf", 4)
     draw.text((270,565), captt, font=fontts, fill="Black")
     
     #_____________________Image Show__________________________
