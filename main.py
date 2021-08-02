@@ -25,7 +25,9 @@ async def For_728_of_60_size(Heading: str, Building_name: str, Launching_time: s
     new_img1 = image.resize((182,90))
     width,height = new_img1.size#Size of image
     
+
     #_____________________Logo Resize__________________________
+    
 
     new_size = logo.resize((60,58))
     w,h = new_size.size
