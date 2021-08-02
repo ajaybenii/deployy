@@ -13,7 +13,7 @@ logo = Image.open("images/logo.jpg")
 
 
 @app.post("/image_1")
-async def For_728_of_60_size(Heading: str, Building_name: str, Launching_time: str, Insert_image: UploadFile=File(...)):
+async def For_728_of_60_size(Heading: str, Insert_image: UploadFile=File(...)):
     '''In this function we can upload image and 
     output is google ad image with text 
     '''
@@ -27,7 +27,7 @@ async def For_728_of_60_size(Heading: str, Building_name: str, Launching_time: s
     
 
     #_____________________Logo Resize__________________________
-    
+
 
     new_size = logo.resize((60,58))
     w,h = new_size.size
@@ -46,13 +46,13 @@ async def For_728_of_60_size(Heading: str, Building_name: str, Launching_time: s
     font = ImageFont.truetype("font_style/Anticva.ttf", 20)
     draw.text((6,24), text, font=font, fill="Brown")#This is the location of text 
     
-    caption = Building_name#Building Name 
-    font = ImageFont.truetype("font_style/arial-bold.ttf", 13)
-    draw.text((295,23), caption, font=font, fill="Black")#This is the location of text
+    # caption = Building_name#Building Name 
+    # font = ImageFont.truetype("font_style/arial-bold.ttf", 13)
+    # draw.text((295,23), caption, font=font, fill="Black")#This is the location of text
 
-    text= Launching_time#Timing text(Launching soon)
-    fonts = ImageFont.truetype("font_style/Serif.ttf", 11)
-    draw.text((328,53), text, font=fonts, fill="Black")  
+    # text= Launching_time#Timing text(Launching soon)
+    # fonts = ImageFont.truetype("font_style/Serif.ttf", 11)
+    # draw.text((328,53), text, font=fonts, fill="Black")  
 
     w_l, h_l = 310, 44 #starting point and end pont
     shape_line = [(430, 44), (w_l, h_l)]#Size and shape of Line
